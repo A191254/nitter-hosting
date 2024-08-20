@@ -25,13 +25,7 @@ services:
     runtime: image
     image: 
       url: redis:6-alpine
-    command: redis-server --save 60 1 --loglevel warning
     disk:
       name: nitter-redis
       mountPath: /data
-    restart: unless-stopped
-    healthcheck:
-      test: redis-cli ping
-      interval: 5s
-      timeout: 5s
-      retries: 12
+
