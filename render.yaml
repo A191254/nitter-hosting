@@ -20,6 +20,3 @@ services:
       sizeGB: 1
     autoDeploy: true
     numInstances: 1
-    notifyOnFail: true
-    retryDelay: 5s
-    retries: 3
