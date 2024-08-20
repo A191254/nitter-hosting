@@ -24,7 +24,7 @@ services:
     type: pserv
     runtime: image
     image: 
-      url: redis:6-alpine
+      url: redis:6-alpineceqwc
     disk:
       name: nitter-redis
       mountPath: /data
