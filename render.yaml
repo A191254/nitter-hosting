@@ -19,7 +19,7 @@ services:
       mountPath: /nitter-data
       sizeGB: 1
     autoDeploy: true
-    instances: 1
+    numInstances: 1
     notifyOnFail: true
     retryDelay: 5s
     retries: 3
