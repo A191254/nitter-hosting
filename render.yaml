@@ -1,0 +1,41 @@
+services:
+  - name: nitter
+    type: web
+    env: docker
+    image: ghcr.io/sekai-soft/nitter-self-contained
+    plan: free
+    envVars:
+      - key: NITTER_ACCOUNTS_FILE
+        value: /nitter-data/guest_accounts.json
+      - key: DISABLE_REDIS
+        value: "1"
+      - key: REDIS_HOST
+        value: nitter-redis
+    healthCheckPath: /
+    regions:
+      - oregon
+    disk:
+      name: nitter-data
+      mountPath: /nitter-data
+      sizeGB: 1
+    autoDeploy: true
+    instances: 1
+    notifyOnFail: true
+    retryDelay: 5s
+    retries: 3
+
+  - name: nitter-redis
+    type: redis
+    plan: free
+    disk:
+      name: nitter-redis
+      mountPath: /data
+      sizeGB: 1
+    autoDeploy: true
+    notifyOnFail: true
+    retryDelay: 5s
+    retries: 3
+
+envVars:
+  - key: REDIS_HOST
+    value: nitter-redis
