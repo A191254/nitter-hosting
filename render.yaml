@@ -1,6 +1,6 @@
 services:
   - name: nitter
-    type: web
+    type: pserv
     runtime: image
     image:
       url: ghcr.io/sekai-soft/nitter-self-contained
