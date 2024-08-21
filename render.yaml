@@ -1,6 +1,7 @@
 services:
   - name: nitter
     type: web
+    plan: starter
     runtime: image
     image:
       url: ghcr.io/sekai-soft/nitter-self-contained
