@@ -11,6 +11,10 @@ services:
         value: "1"
       - key: REDIS_HOST
         value: nitter-redis
+    disk:
+      name: nitter-data
+      mountPath: /nitter-data
+      sizeGB: 1
     region: oregon
     autoDeploy: true
     numInstances: 1
