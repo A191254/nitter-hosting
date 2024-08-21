@@ -1,7 +1,6 @@
 services:
   - name: nitter
     type: web
-    plan: starter
     runtime: image
     image:
       url: ghcr.io/sekai-soft/nitter-self-contained
@@ -12,6 +11,7 @@ services:
         value: "1"
       - key: REDIS_HOST
         value: nitter-redis
+    plan: starter
     region: oregon
     autoDeploy: true
     numInstances: 1
