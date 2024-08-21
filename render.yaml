@@ -11,7 +11,6 @@ services:
         value: "1"
       - key: REDIS_HOST
         value: nitter-redis
-    plan: starter
     region: oregon
     autoDeploy: true
     numInstances: 1
