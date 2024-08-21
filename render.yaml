@@ -7,7 +7,7 @@ services:
     disk:
       name: nitter-data
       mountPath: /nitter-data
-    plan: free
+      sizeGB: 1
     envVars:
       - key: NITTER_ACCOUNTS_FILE
         value: /nitter-data/guest_accounts.json
