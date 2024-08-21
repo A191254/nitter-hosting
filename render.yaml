@@ -14,10 +14,6 @@ services:
         value: nitter-redis
     healthCheckPath: /
     region: oregon
-    disk:
-      name: nitter-data
-      mountPath: /nitter-data
-      sizeGB: 1
     autoDeploy: true
     numInstances: 1
   - name: redis
