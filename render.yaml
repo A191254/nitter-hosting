@@ -12,7 +12,6 @@ services:
         value: "1"
       - key: REDIS_HOST
         value: nitter-redis
-    healthCheckPath: /
     region: oregon
     autoDeploy: true
     numInstances: 1
