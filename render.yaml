@@ -11,6 +11,16 @@ services:
         value: "1"
       - key: REDIS_HOST
         value: nitter-redis
+      - key: TWITTER_USERNAME
+        value: athTestAcc
+      - key: TWITTER_PASSWORD
+        value: @12Sept2004
+      - key: INSTANCE_RSS_PASSWORD
+        value: @12Sept2004
+      - key: INSTANCE_WEB_USERNAME
+        value: athTestAcc
+      - key: INSTANCE_WEB_PASSWORD
+        value: @12Sept2004
     disk:
       name: nitter-data
       mountPath: /nitter-data
